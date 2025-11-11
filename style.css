@@ -1,0 +1,133 @@
+:root {
+	--bg: #f7f8fb;
+	--card: #ffffff;
+	--accent: #047857;
+	--danger: #dc2626;
+	--text: #0f172a;
+	--border: #d1d5db;
+}
+
+/* === Base (Mobile First — 375px) === */
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	margin: 0;
+	padding: 1rem;
+}
+
+main {
+	background: var(--card);
+	padding: 1.25rem;
+	border-radius: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+	width: 100%;
+	max-width: 360px;
+	margin-top: 1rem;
+}
+
+main h1 {
+	color: var(--text);
+	font-size: 1.25rem;
+	margin-bottom: 1.25rem;
+	text-align: center;
+}
+
+/* Form elements */
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+}
+
+label {
+	font-weight: 600;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+	color: var(--text);
+}
+
+input,
+select,
+textarea {
+	padding: 0.65rem;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	font-size: 0.9rem;
+	color: var(--text);
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+input[type="checkbox"] {
+	width: auto;
+	margin-right: 0.5rem;
+}
+
+.error {
+	color: var(--danger);
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+}
+
+/* Button */
+button {
+	background-color: var(--accent);
+	color: white;
+	border: none;
+	padding: 0.75rem;
+	width: 100%;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+button:hover {
+	background-color: #065f46;
+}
+
+/* === Desktop (≥1440px) === */
+@media (min-width: 1440px) {
+	body {
+		padding: 4rem;
+		align-items: center;
+	}
+
+	main {
+		padding: 2.5rem 3rem;
+		max-width: 500px;
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	main h1 {
+		font-size: 1.5rem;
+		text-align: left;
+	}
+
+	label {
+		font-size: 1rem;
+	}
+
+	input,
+	select,
+	textarea {
+		font-size: 1rem;
+		padding: 0.8rem;
+	}
+
+	button {
+		font-size: 1.1rem;
+		padding: 0.9rem;
+	}
+}
