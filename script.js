@@ -18,23 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     //Function to show error
-    // function showError (input, element, message) {
-    //     element.textContent = message;
-    //     input.setAttribute('aria-invalid', 'true');
-    // }
-    
-  
-
-    // function clearError (input, element) {
-    //     element.textContent = '';
-    //     input.removeAttribute ('aria-invalid');
-    // }
-
-
     function showError(input, element, message) {
 		element.textContent = message;
 		input.setAttribute('aria-invalid', 'true');
 	}
+
+    //Function to clear error
 
 	function clearError(input, element) {
 		element.textContent = '';
